@@ -1,0 +1,854 @@
+/* ----------------------------------------------------------------
+	Custom CSS
+
+	Add all your Custom Styled CSS here for New Styles or
+	Overwriting Default Theme Styles for Better Handling Updates
+-----------------------------------------------------------------*/
+
+/* Custom Header Background - High Priority */
+.bg-color,
+.bg-color #header-wrap {
+	background-color: #E31E24 !important;
+}
+
+/* Override CSS Theme Color Variable */
+:root {
+	--cnvs-themecolor: #E31E24 !important;
+}
+
+/* Tab Navigation Colors */
+.nav-tabs .nav-link {
+	color: #fafafa !important;
+}
+
+.nav-tabs .nav-link.active {
+	color: #000000 !important;
+}
+
+/* Logo Styling */
+#logo img {
+	display: block;
+	max-width: 310px;
+	max-height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	transition: height 0.4s ease, padding 0.4s ease, margin 0.4s ease, opacity 0.3s ease;
+}
+
+/* Remove header-wrap-clone height */
+.header-wrap-clone {
+	height: auto !important;
+}
+
+/* Header Styling with Borders */
+#header {
+	--cnvs-sticky-header-height: var(--cnvs-header-height);
+	--cnvs-header-border-color: rgba(var(--cnvs-contrast-rgb), .1);
+	--cnvs-header-transparent-border-color: rgba(var(--cnvs-contrast-rgb), .1);
+	--cnvs-primary-menu-padding-x: 15px;
+	--cnvs-header-floating-top-offset: 60px;
+	--cnvs-header-floating-padding: 30px;
+	--cnvs-side-header-padding-gutters: 30px;
+	--cnvs-primary-menu-color: var(--cnvs-contrast-900);
+	--cnvs-primary-menu-hover-color: var(--cnvs-themecolor);
+	--cnvs-primary-menu-active-color: var(--cnvs-primary-menu-hover-color);
+	--cnvs-primary-menu-font: var(--cnvs-primary-font);
+	--cnvs-primary-menu-font-weight: 700;
+	--cnvs-primary-menu-font-size: 0.8125rem;
+	--cnvs-primary-menu-tt: uppercase;
+	--cnvs-primary-menu-ls: 1px;
+	--cnvs-primary-menu-icon-size: 1rem;
+	--cnvs-primary-menu-icon-gap: 0.625rem;
+	--cnvs-primary-menu-hover-text-decoration: none;
+	--cnvs-primary-menu-hover-text-decoration-offset: 3px;
+	--cnvs-primary-menu-submenu-padding-x: 15px;
+	--cnvs-primary-menu-submenu-padding-y: 10px;
+	--cnvs-primary-menu-submenu-top-border: 2px solid var(--cnvs-themecolor);
+	--cnvs-primary-menu-submenu-width: 240px;
+	--cnvs-primary-menu-submenu-display-speed: 0.3s;
+	--cnvs-primary-menu-submenu-display-offset: 0.5rem;
+	--cnvs-primary-menu-submenu-font: var(--cnvs-body-font);
+	--cnvs-primary-menu-submenu-font-size: 0.75rem;
+	--cnvs-primary-menu-submenu-font-weight: 600;
+	--cnvs-primary-menu-submenu-hover-font-weight: 700;
+	--cnvs-primary-menu-submenu-tt: uppercase;
+	--cnvs-primary-menu-submenu-color: var(--cnvs-contrast-900);
+	--cnvs-primary-menu-submenu-spacing: 0;
+	--cnvs-primary-menu-submenu-border: 1px solid rgba(var(--cnvs-contrast-rgb), 0.1);
+	--cnvs-primary-menu-submenu-hover-bg: rgba(var(--cnvs-contrast-rgb), 0.025);
+	--cnvs-primary-menu-submenu-hover-color: var(--cnvs-primary-menu-active-color);
+	--cnvs-primary-menu-submenu-hover-padding-offset: 0.25rem;
+	--cnvs-primary-menu-submenu-subtitle-display: none;
+	--cnvs-primary-menu-submenu-subtitle-font-size: var(--cnvs-primary-menu-submenu-font-size);
+	--cnvs-primary-menu-submenu-subtitle-font-weight: 400;
+	--cnvs-primary-menu-submenu-subtitle-tt: none;
+	--cnvs-header-misc-icons-size: 1.125rem;
+	--cnvs-header-misc-icons-color: var(--cnvs-primary-menu-color);
+	--cnvs-mega-menu-width-sm: 400px;
+	--cnvs-mobile-menu-off-canvas-width: 280px;
+	--cnvs-top-search-font-size: 2rem;
+	--cnvs-top-search-placeholder: var(--cnvs-contrast-600);
+	border-top: 1px solid rgba(var(--cnvs-contrast-rgb), 0.9);
+	border-bottom: 1px solid rgba(var(--cnvs-contrast-rgb), 0.9);
+	padding: 10px 0px;
+}
+
+/* Header Wrap with Top and Bottom Borders */
+#header-wrap {
+	border-top: 1px solid rgba(var(--cnvs-contrast-rgb), 0.1);
+	border-bottom: 1px solid rgba(var(--cnvs-contrast-rgb), 0.1);
+}
+
+/* Active Menu Item Bottom Border */
+.primary-menu .menu-item.current .menu-link,
+.primary-menu .menu-item.active .menu-link {
+	border-bottom: 3px solid #E31E24 !important;
+	color: #E31E24 !important;
+}
+
+/* Current Menu Item Color */
+.menu-item.current>.menu-link {
+	color: #E31E24 !important;
+}
+
+/* Padding Helper Classes */
+.pt-100 {
+	padding-top: 100px !important;
+}
+
+.pt-120 {
+	padding-top: 120px !important;
+}
+
+/* Button Styling - Purple Theme, No Border Radius, No Animation */
+.button,
+.btn,
+button,
+.button.button-dark,
+.button.button-black,
+input[type="submit"] {
+	background-color: #E31E24 !important;
+	border-radius: 4px !important;
+	border: none !important;
+	transition: all 0.3s ease !important;
+	animation: none !important;
+	/* Killer switch for animation */
+	-webkit-animation: none !important;
+	transform: none !important;
+	/* Prevent transform animations */
+}
+
+.button:hover,
+.btn:hover,
+button:hover,
+input[type="submit"]:hover {
+	background-color: #b71c1c !important;
+	transform: translateY(-2px) !important;
+	box-shadow: 0 4px 8px rgba(227, 30, 36, 0.3) !important;
+	animation: none !important;
+}
+
+/* Force override any existing keyframes from other files */
+.button.button-rounded,
+.button.button-large,
+.button.button-small {
+	border-radius: 4px !important;
+	animation: none !important;
+}
+
+/* Menu Get a Quote Button - White Background */
+/* Custom Header Quote Link */
+.header-quote-link {
+	background-color: transparent !important;
+	color: #E31E24 !important;
+	border: none !important;
+	border-bottom: 3px solid #E31E24 !important;
+	padding: 19px 0 !important;
+	display: inline-block !important;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 0.8125rem;
+	text-decoration: none !important;
+	margin-left: 20px !important;
+	/* Add some spacing if needed */
+	line-height: 22px !important;
+}
+
+.header-quote-link:hover {
+	background-color: transparent !important;
+	color: #E31E24 !important;
+}
+
+/* Buy/Sell Section Button - White Background */
+.col-padding .button-white,
+.col-padding .button-light {
+	background-color: #fafafa !important;
+	color: #E31E24 !important;
+	border: 1px solid #E31E24 !important;
+}
+
+.col-padding .button-white:hover,
+.col-padding .button-light:hover {
+	background-color: #E31E24 !important;
+	color: #fafafa !important;
+	border: 1px solid #E31E24 !important;
+}
+
+/* Aggressive Logo Grayscale & Color Override - REMOVED */
+#logo img,
+#header #logo img,
+.logo-default,
+.logo-dark,
+img.logo-default,
+img.logo-dark {
+	filter: none !important;
+	-webkit-filter: none !important;
+	opacity: 1;
+}
+
+/* Footer Link Visibility */
+.dark .widget_links li a {
+	color: #FFFFFF !important;
+	opacity: 0.9 !important;
+	font-weight: 500 !important;
+}
+
+.dark .widget_links li a:hover {
+	color: #E31E24 !important;
+	/* Brand purple on hover */
+	opacity: 1 !important;
+	text-decoration: none !important;
+	padding-left: 5px;
+	/* Slight movement for interaction */
+}
+
+/* Ensure footer headings are visible */
+.dark .widget h4 {
+	color: #FFFFFF !important;
+	opacity: 1 !important;
+}
+
+/* Slider Caption Right Alignment */
+.slider-caption-right {
+	text-align: right !important;
+}
+
+.slider-caption-right div,
+.slider-caption-right span {
+	text-align: right !important;
+}
+
+/* Revolution Slider */
+.ares .tp-tab {
+	border: 1px solid #eee;
+}
+
+.ares .tp-tab-content {
+	margin-top: -4px;
+}
+
+.ares .tp-tab-content {
+	padding: 15px 15px 15px 110px;
+}
+
+.ares .tp-tab-image {
+	width: 80px;
+	height: 80px;
+}
+
+/* Limit Bus Slider Image Width */
+#rev_slider_424_1 .tp-bgimg.defaultimg {
+	max-width: 780px !important;
+}
+
+
+
+/* Active Slider Tab Border */
+.ares .tp-tab.selected {
+	border-bottom: 3px solid #E31E24 !important;
+}
+
+/* Revolution Slider Visibility Enhancements */
+/* 1. Make Tabs More Visible */
+.ares .tp-tab {
+	background-color: #ffffff !important;
+	border: 1px solid #eee !important;
+	height: 100px !important;
+	transition: all 0.3s ease !important;
+}
+
+.ares .tp-tab:hover {
+	background-color: #f9f9f9 !important;
+}
+
+.ares .tp-tab-title {
+	color: #333 !important;
+	font-size: 16px !important;
+	font-weight: 700 !important;
+	margin-bottom: 5px !important;
+}
+
+.ares .tp-tab-desc {
+	color: #777 !important;
+}
+
+/* 2. Text Prominence */
+.tp-caption {
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8) !important;
+	/* Strong shadow for readability */
+}
+
+/* 3. Section Height Adjustment */
+#rev_slider_424_1_wrapper {
+	min-height: 750px !important;
+	/* Force taller wrapper */
+	margin-bottom: 50px !important;
+}
+
+
+/* Mobile Header Layout Adjustments */
+@media (max-width: 991.98px) {
+
+	/* 1. Base Header & Wrapper - strict reset */
+	#header,
+	#header-wrap,
+	#header-wrap .container,
+	#header-wrap .header-row {
+		height: 60px !important;
+		min-height: 60px !important;
+		max-height: 60px !important;
+		line-height: 60px !important;
+		padding: 0 !important;
+		margin: 0 !important;
+		border: 0 !important;
+		box-shadow: none !important;
+		top: 0 !important;
+		background: transparent !important;
+	}
+
+	#header {
+		background-color: #ffffff !important;
+		position: relative !important;
+	}
+
+	/* 2. Logo Row (Background Layer) - Centered */
+	#header>.container>.header-row {
+		display: flex !important;
+		justify-content: center !important;
+		align-items: center !important;
+		height: 60px !important;
+		padding: 0 !important;
+	}
+
+	#logo {
+		display: flex !important;
+		align-items: center !important;
+		justify-content: center !important;
+		margin: 0 !important;
+		height: 100% !important;
+	}
+
+	#logo img {
+		height: 24px !important;
+		width: auto !important;
+		max-width: 160px !important;
+		margin: 0 !important;
+		display: block !important;
+	}
+
+	/* 3. Helper Layer (Foreground) - Flex for ends */
+	#header-wrap {
+		position: absolute !important;
+		width: 100% !important;
+		pointer-events: none;
+		/* Clicking passes through to logo if needed, but buttons catch events */
+		z-index: 100 !important;
+	}
+
+	#header-wrap .container>.header-row {
+		display: flex !important;
+		justify-content: space-between !important;
+		align-items: center !important;
+		padding: 0 15px !important;
+		/* Space from edges */
+		width: 100% !important;
+	}
+
+	/* 4. Hamburger (Left) - Thinner & Sleeker */
+	.primary-menu-trigger {
+		pointer-events: auto !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		top: 0 !important;
+		left: 0 !important;
+		opacity: 1 !important;
+		display: flex !important;
+		align-items: center !important;
+		height: 60px !important;
+		/* Full height to center content vertically */
+	}
+
+	.cnvs-hamburger-box {
+		width: 24px !important;
+		height: 12px !important;
+		/* Tighter total height */
+		display: block !important;
+		position: relative !important;
+	}
+
+	.cnvs-hamburger-inner,
+	.cnvs-hamburger-inner::before,
+	.cnvs-hamburger-inner::after {
+		width: 24px !important;
+		height: 1px !important;
+		/* Very sleek 1px line */
+		background-color: #333 !important;
+		border-radius: 0 !important;
+		position: absolute !important;
+		left: 0 !important;
+		transition: transform 0.15s ease !important;
+	}
+
+	.cnvs-hamburger-inner {
+		top: 50% !important;
+		margin-top: -0.5px !important;
+		/* Half of 1px height */
+	}
+
+	.cnvs-hamburger-inner::before {
+		top: -6px !important;
+		/* 6px gap */
+		content: "" !important;
+	}
+
+	.cnvs-hamburger-inner::after {
+		bottom: -6px !important;
+		/* 6px gap */
+		content: "" !important;
+	}
+
+	/* 5. Search Icon (Right) */
+	.header-misc {
+		pointer-events: auto !important;
+		margin: 0 !important;
+		display: flex !important;
+		align-items: center !important;
+		height: 60px !important;
+		/* Full height */
+	}
+
+	#top-search-trigger {
+		margin: 0 !important;
+		padding: 0 !important;
+		display: flex !important;
+		align-items: center !important;
+		height: 100% !important;
+	}
+
+	/* Hide Extras */
+	.header-extras,
+	.header-buttons,
+	#header #logo img.logo-dark {
+		display: none !important;
+	}
+
+	/* 5. Enable Clicks on Interactive Elements & Mobile Menu Fixes */
+	.primary-menu-trigger,
+	.header-misc,
+	.header-misc #top-search,
+	.primary-menu {
+		pointer-events: auto !important;
+	}
+
+	/* Fix Mobile Menu Visibility & Background */
+	.primary-menu {
+		display: none;
+		/* Hide by default on mobile to prevent white strip */
+		background-color: #ffffff !important;
+		border-bottom: 2px solid #E31E24 !important;
+		padding-bottom: 10px !important;
+	}
+
+	/* Show when open */
+	body.primary-menu-open .primary-menu,
+	.primary-menu.primary-menu-active {
+		display: block !important;
+	}
+
+	.primary-menu .menu-container {
+		background-color: #ffffff !important;
+	}
+
+	/* Fix Menu Item Colors on Mobile */
+	.primary-menu .menu-item .menu-link {
+		color: #333 !important;
+	}
+
+	.primary-menu .menu-item.current .menu-link {
+		color: #E31E24 !important;
+	}
+
+	/* 6. Strict Hamburger Button Reset */
+	button.cnvs-hamburger,
+	button.cnvs-hamburger:hover,
+	button.cnvs-hamburger:focus,
+	.primary-menu-trigger button,
+	.primary-menu-trigger button:hover,
+	.sub-menu-trigger,
+	.sub-menu-trigger:hover,
+	.sub-menu-trigger:focus {
+		background-color: transparent !important;
+		background: transparent !important;
+		box-shadow: none !important;
+		border: none !important;
+		transform: none !important;
+		padding: 0 !important;
+		margin: 0 !important;
+		height: auto !important;
+		width: auto !important;
+	}
+}
+
+/* Mobile Revolution Slider Overrides - "Hero Style" */
+@media (max-width: 767px) {
+
+	/* 1. Remove the section background image (skyline) and make it white */
+	.slider-bg-container {
+		background-image: none !important;
+		background-color: #ffffff !important;
+	}
+
+	/* 2. Force text color to black for captions */
+	.tp-caption {
+		color: #000000 !important;
+		text-shadow: none !important;
+		/* Remove shadow for cleaner look on white */
+	}
+
+	/* Exception: Keep button text white (if it has button class) */
+	.tp-caption.button {
+		color: #ffffff !important;
+	}
+
+	/* 3. Handle the Bus Image (Slide Background) */
+	/* 
+       We want the bus at the bottom. The slide background is usually a div with class .slotholder or .tp-bgimg.
+       We'll try to force its position. 
+       Note: Revolution Slider creates complex DOM. .rev-slidebg is the source image but turned into background-image of a DIV.
+    */
+	.rev_slider .slotholder,
+	.rev_slider .tp-bgimg {
+		background-position: center bottom !important;
+		background-size: contain !important;
+		/* Ensure the whole bus fits */
+		background-repeat: no-repeat !important;
+		top: auto !important;
+		bottom: 0 !important;
+		height: 60% !important;
+		/* Restrict height so it stays at the bottom */
+	}
+
+	/* Ensure the wrapper respects the white background */
+	.rev_slider_wrapper,
+	.rev_slider {
+		background-color: transparent !important;
+	}
+}
+
+@media (max-width: 767px) {
+	.slider-caption-right {
+		text-align: left !important;
+	}
+}
+
+@media (max-width: 767px) {
+
+	/* Strong override for caption positioning */
+	#rev_slider_424_1 .tp-caption {
+		left: 20px !important;
+		right: auto !important;
+		text-align: left !important;
+	}
+
+	/* Ensure the bus image stays at the bottom */
+	#rev_slider_424_1 .slotholder,
+	#rev_slider_424_1 .tp-bgimg {
+		height: 40% !important;
+		/* Smaller height to force it down */
+		top: auto !important;
+		bottom: 0px !important;
+		background-position: center bottom !important;
+		background-size: contain !important;
+	}
+}
+
+/* FINAL Mobile Slider Fixes */
+@media (max-width: 767px) {
+
+	/* 1. Container Height & Background */
+	#rev_slider_424_1_wrapper,
+	#rev_slider_424_1 {
+		min-height: 700px !important;
+		background-color: #fff !important;
+		background-image: none !important;
+	}
+
+	/* 2. Bus Image Placement (Bottom) */
+	/* Force the slot holder to be at the bottom and contain the image */
+	#rev_slider_424_1 .slotholder {
+		top: auto !important;
+		bottom: 0 !important;
+		height: 45% !important;
+		/* Occupy bottom ~300px */
+		width: 100% !important;
+	}
+
+	#rev_slider_424_1 .tp-bgimg {
+		background-position: center bottom !important;
+		background-size: contain !important;
+		background-repeat: no-repeat !important;
+		width: 100% !important;
+		height: 100% !important;
+	}
+
+	/* 3. Text & Button Styling */
+	#rev_slider_424_1 .tp-caption {
+		color: #000000 !important;
+		text-shadow: none !important;
+		text-align: left !important;
+		left: 20px !important;
+		/* Force left alignment */
+		right: auto !important;
+	}
+
+	/* 4. Description Specifics */
+	#rev_slider_424_1 .tp-caption.slider-caption-right {
+		white-space: normal !important;
+		width: 90% !important;
+		/* Use screen width percentage to wrap safely */
+		max-width: 320px !important;
+		font-size: 16px !important;
+		line-height: 1.5 !important;
+	}
+
+	/* 5. Button Specifics */
+	#rev_slider_424_1 .tp-caption.button {
+		color: #ffffff !important;
+		/* Keep text white */
+		background-color: #000000 !important;
+		/* Ensure generic dark button */
+		border-color: #000000 !important;
+	}
+}
+
+/* REVISED Mobile Slider - Absolute Layout Fix */
+@media (max-width: 767px) {
+
+	/* Reset Wrappers positions to allow manual placement */
+	#rev_slider_424_1 .tp-parallax-wrap,
+	#rev_slider_424_1 .tp-loop-wrap,
+	#rev_slider_424_1 .tp-mask-wrap {
+		left: 0 !important;
+		right: auto !important;
+		position: absolute !important;
+		width: 100% !important;
+	}
+
+	/* 1. Main Title */
+	#rev_slider_424_1 .tp-caption.font-primary {
+
+		top: 60px !important;
+		left: 20px !important;
+		width: 90% !important;
+		text-align: left !important;
+		white-space: normal !important;
+		line-height: 1.2 !important;
+		font-size: 32px !important;
+		/* Ensure it fits */
+	}
+
+	/* 2. Subtitle (Small uppercase) */
+	#rev_slider_424_1 .tp-caption.font-body.text-uppercase {
+		top: 30px !important;
+		left: 20px !important;
+		text-align: left !important;
+	}
+
+	/* 3. Description */
+	#rev_slider_424_1 .tp-caption.slider-caption-right {
+		top: 150px !important;
+		left: 20px !important;
+		width: 90% !important;
+		/* Wide but with padding */
+		max-width: none !important;
+		white-space: normal !important;
+		text-align: left !important;
+		font-size: 16px !important;
+		line-height: 1.5 !important;
+	}
+
+	/* 4. Button */
+	#rev_slider_424_1 .tp-caption.button {
+		top: 280px !important;
+		/* Sufficiently below description */
+		left: 20px !important;
+		width: auto !important;
+	}
+}
+
+/* REVISED Mobile Slider - Refinements */
+@media (max-width: 767px) {
+	/* Adjust Vertical Spacing to Compact the Top Section */
+
+	/* 1. Main Title - Moved Up */
+	#rev_slider_424_1 .tp-caption.font-primary {
+		top: 40px !important;
+	}
+
+	/* 2. Subtitle - Moved Up */
+	#rev_slider_424_1 .tp-caption.font-body.text-uppercase {
+		top: 15px !important;
+	}
+
+	/* 3. Description - Moved Up */
+	#rev_slider_424_1 .tp-caption.slider-caption-right {
+		top: 130px !important;
+	}
+
+	/* 4. Button - Moved Up & Fixed Width */
+	#rev_slider_424_1 .tp-caption.button {
+		top: 260px !important;
+		display: inline-block !important;
+		width: auto !important;
+		min-width: 0 !important;
+		max-width: 200px !important;
+		/* Prevent full width bar */
+		white-space: nowrap !important;
+	}
+
+	/* 5. Bus Image - Made Slightly Shorter to Reduce Overlap */
+	#rev_slider_424_1 .slotholder {
+		height: 40% !important;
+	}
+}
+
+/* Final Mobile Layout Tweak - Clear Overlap */
+@media (max-width: 767px) {
+	#rev_slider_424_1 .tp-caption.font-primary {
+		top: 30px !important;
+	}
+
+	#rev_slider_424_1 .tp-caption.font-body.text-uppercase {
+		top: 10px !important;
+	}
+
+	#rev_slider_424_1 .tp-caption.slider-caption-right {
+		top: 110px !important;
+	}
+
+	#rev_slider_424_1 .tp-caption.button {
+		top: 220px !important;
+		padding: 12px 28px !important;
+		font-size: 14px !important;
+		/* Ensure readability */
+		line-height: 18px !important;
+	}
+}
+
+/* FINAL REFINED Mobile Slider Styling */
+@media (max-width: 767px) {
+
+	/* 1. Spacing & Positioning */
+	#rev_slider_424_1 .tp-caption.font-body.text-uppercase {
+		top: 20px !important;
+		left: 20px !important;
+		font-size: 13px !important;
+		letter-spacing: 2px !important;
+		color: #999 !important;
+	}
+
+	#rev_slider_424_1 .tp-caption.font-primary {
+		top: 50px !important;
+		left: 20px !important;
+		font-size: 32px !important;
+		line-height: 1.1 !important;
+		width: 90% !important;
+		white-space: normal !important;
+	}
+
+	#rev_slider_424_1 .tp-caption.slider-caption-right {
+		top: 140px !important;
+		left: 20px !important;
+		font-size: 16px !important;
+		line-height: 1.5 !important;
+		color: #444 !important;
+		width: 85% !important;
+		white-space: normal !important;
+	}
+
+	#rev_slider_424_1 .tp-caption.button {
+		top: 220px !important;
+		/* Moved higher */
+		left: 20px !important;
+		/* Force Theme Purple & Shape */
+		background-color: #E31E24 !important;
+		color: #FFF !important;
+		border-radius: 4px !important;
+		padding: 12px 35px !important;
+		font-size: 14px !important;
+		font-weight: 700 !important;
+		text-transform: uppercase !important;
+		letter-spacing: 1px !important;
+		border: none !important;
+		display: inline-block !important;
+		width: auto !important;
+		z-index: 100 !important;
+	}
+
+	/* Adjust bus image - Smaller to avoid overlap */
+	#rev_slider_424_1 .slotholder {
+		height: 35% !important;
+		bottom: 0 !important;
+	}
+
+	/* 6. Tabs/Navigation Visibility */
+	.tp-tabs {
+		display: block !important;
+		opacity: 1 !important;
+		visibility: visible !important;
+		z-index: 100 !important;
+	}
+
+	.ares .tp-tab {
+		max-width: 200px !important;
+		height: 60px !important;
+		background-color: #fff !important;
+		border: 1px solid #e5e5e5 !important;
+		margin-right: 10px !important;
+	}
+
+	.ares .tp-tab-content {
+		padding: 10px 10px 10px 60px !important;
+	}
+
+	.ares .tp-tab-image {
+		width: 50px !important;
+		height: 50px !important;
+	}
+
+	.ares .tp-tab-title {
+		font-size: 12px !important;
+		line-height: 1.2 !important;
+	}
+
+	.ares .tp-tab-date {
+		display: none !important;
+		/* Hide subtitle on mobile to save space */
+	}
+
+	.ares .tp-tab.selected {
+		border-color: #714B67 !important;
+		box-shadow: 0 0 10px rgba(113, 75, 103, 0.2) !important;
+	}
+}

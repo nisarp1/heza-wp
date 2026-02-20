@@ -1,0 +1,9 @@
+# WordPress .gitignore
+wp-config.php
+.DS_Store
+*.log
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/backup-db/
+node_modules/
+.env
